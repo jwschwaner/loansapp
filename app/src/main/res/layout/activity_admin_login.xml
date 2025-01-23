@@ -8,7 +8,8 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
-    tools:context=".AdminLoginActivity">
+    tools:context=".AdminLoginActivity"
+    android:fitsSystemWindows="true">
 
     <TextView
         android:layout_width="wrap_content"
