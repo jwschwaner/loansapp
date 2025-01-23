@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Generelle tekster -->
+    <string name="app_name">Loans App</string>
+    <string name="hello_world">Hello World!</string>
+
+    <!-- Filtreringstekster (bruges i AdminActivity) -->
+    <string name="filter_brand">Filter Brand</string>
+    <string name="filter_cable">Filter Cable</string>
+
+    <!-- Andre eksempler på strings, du kan bruge -->
+    <string name="select_access_type">Vælg adgangstype</string>
+    <string name="user_button_text">Bruger</string>
+    <string name="admin_button_text">Admin</string>
+    <string name="admin_login_title">Admin Login</string>
+    <string name="enter_admin_code">Indtast admin-kode</string>
+    <string name="admin_login_button">Log ind</string>
+
+    <!-- Du kan også tilføje de tekster, du bruger i layout-filerne,
+         hvis du vil have dem eksternt i strings fremfor hardkodet i layout. -->
+</resources>

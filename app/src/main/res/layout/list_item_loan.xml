@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="2dp">
+
+    <TextView
+        android:id="@+id/tvItemBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tablet-brand"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/tvItemCable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kabeltype" />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navn" />
+
+    <TextView
+        android:id="@+id/tvItemContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kontakt" />
+
+    <TextView
+        android:id="@+id/tvItemTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tidspunkt" />
+
+    <Button
+        android:id="@+id/btnMarkReturned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marker som afleveret"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>
