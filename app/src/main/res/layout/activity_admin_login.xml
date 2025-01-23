@@ -8,13 +8,14 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
+    android:layout_marginHorizontal="8dp"
     tools:context=".AdminLoginActivity"
     android:fitsSystemWindows="true">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Admin Login"
+        android:text="@string/admin_login"
         android:textStyle="bold"
         android:textSize="24sp"
         android:layout_marginBottom="32dp"/>
@@ -23,7 +24,7 @@
         android:id="@+id/etAdminCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Indtast admin-kode"
+        android:hint="@string/input_admin_code"
         android:inputType="textPassword"
         android:layout_marginBottom="16dp" />
 
@@ -31,6 +32,6 @@
         android:id="@+id/btnAdminLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Log ind" />
+        android:text="@string/log_in" />
 
 </LinearLayout>

@@ -18,26 +18,52 @@
         android:weightSum="3"
         android:layout_marginBottom="8dp">
 
-        <Spinner
-            android:id="@+id/spinnerFilterBrand"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:prompt="@string/filter_brand" />
+            android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/spinnerFilterCable"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_by_brand"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinnerFilterBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/filter_brand" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:prompt="@string/filter_cable" />
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filter_by_cable"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinnerFilterCable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/filter_cable" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnApplyFilter"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Filtrer" />
+            android:text="@string/filter" />
     </LinearLayout>
 
     <View

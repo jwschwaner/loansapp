@@ -13,7 +13,7 @@
         android:id="@+id/tvConfirmation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kvittering"
+        android:text="@string/receipt"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_marginBottom="16dp" />
@@ -23,14 +23,14 @@
         android:id="@+id/tvSummary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sammenfatning af udlån..."
+        android:text="@string/loan_summary"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/btnBackToMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tilbage til start"
+        android:text="@string/back_to_start"
         />
 
 </LinearLayout>

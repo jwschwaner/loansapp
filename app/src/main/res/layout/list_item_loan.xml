@@ -13,7 +13,7 @@
         android:id="@+id/tvItemBrand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tablet-brand"
+        android:text="@string/tablet_brand"
         android:textStyle="bold"
         android:textSize="16sp"
         />
@@ -22,31 +22,31 @@
         android:id="@+id/tvItemCable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kabeltype" />
+        android:text="@string/cable_type" />
 
     <TextView
         android:id="@+id/tvItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Navn" />
+        android:text="@string/name" />
 
     <TextView
         android:id="@+id/tvItemContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kontakt" />
+        android:text="@string/contact" />
 
     <TextView
         android:id="@+id/tvItemTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tidspunkt" />
+        android:text="@string/time" />
 
     <Button
         android:id="@+id/btnMarkReturned"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Marker som afleveret"
+        android:text="@string/mark_as_returned"
         android:layout_marginTop="4dp"/>
 
 </LinearLayout>

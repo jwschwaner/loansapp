@@ -15,6 +15,31 @@
     <string name="admin_login_title">Admin Login</string>
     <string name="enter_admin_code">Indtast admin-kode</string>
     <string name="admin_login_button">Log ind</string>
+    <string name="filter_by_brand">Filtrer med brand</string>
+    <string name="filter_by_cable">Filtrer med kabeltype</string>
+    <string name="admin_login">Admin Login</string>
+    <string name="input_admin_code">Indtast admin-kode</string>
+    <string name="log_in">Log ind</string>
+    <string name="filter">Filtrer</string>
+    <string name="receipt">Kvittering</string>
+    <string name="loan_summary">Sammenfatning af udlån...</string>
+    <string name="back_to_start">Tilbage til start</string>
+    <string name="choose_user_type">Vælg adgangstype</string>
+    <string name="user">Bruger</string>
+    <string name="admin">Admin</string>
+    <string name="tablet_brand_required">Tablet-brand (påkrævet)</string>
+    <string name="tablet_brand">Tablet-brand</string>
+    <string name="cable_type_optional">Kabeltype (valgfrit)</string>
+    <string name="cable_type">Kabeltype</string>
+    <string name="loaners_name">Låners navn (påkrævet)</string>
+    <string name="loaners_name_input">Indtast låners navn</string>
+    <string name="loaners_contactinfo">Låners kontaktinfo</string>
+    <string name="phone_or_email">Tlf. eller e-mail</string>
+    <string name="register_loan">Registrer udlån</string>
+    <string name="name">Navn</string>
+    <string name="contact">Kontakt</string>
+    <string name="time">Tidspunkt</string>
+    <string name="mark_as_returned">Marker som afleveret</string>
 
     <!-- Du kan også tilføje de tekster, du bruger i layout-filerne,
          hvis du vil have dem eksternt i strings fremfor hardkodet i layout. -->
