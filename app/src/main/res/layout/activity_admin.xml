@@ -71,6 +71,13 @@
         android:layout_height="1dp"
         android:background="#000"/>
 
+    <Button
+        android:id="@+id/btnBackToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_to_start"
+        />
+
     <!-- Liste over udlån -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewLoans"

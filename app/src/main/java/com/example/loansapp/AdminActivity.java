@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ public class AdminActivity extends AppCompatActivity implements LoanListAdapter.
 
     private Spinner spinnerFilterBrand, spinnerFilterCable;
     private Button btnApplyFilter;
+    private Button btnBackToMain;
     private RecyclerView recyclerView;
     private LoanListAdapter adapter;
     private LoanController loanController;
@@ -32,11 +34,17 @@ public class AdminActivity extends AppCompatActivity implements LoanListAdapter.
         spinnerFilterCable = findViewById(R.id.spinnerFilterCable);
         btnApplyFilter = findViewById(R.id.btnApplyFilter);
 
+        btnBackToMain = findViewById(R.id.btnBackToMain);
+
         recyclerView = findViewById(R.id.recyclerViewLoans);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         loanController = new LoanController(this);
 
+        initGui();
+    }
+
+    private void initGui() {
         // Opsæt spinners (hardkodede valgmuligheder)
         // Brand
         String[] brandOptions = {"Alle", "Brand A", "Brand B"};
@@ -64,6 +72,17 @@ public class AdminActivity extends AppCompatActivity implements LoanListAdapter.
                 String selectedCable = spinnerFilterCable.getSelectedItem().toString();
                 List<Loan> filteredLoans = loanController.filterLoans(selectedBrand, selectedCable);
                 loadLoans(filteredLoans);
+            }
+        });
+
+        btnBackToMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Tilbage til startskærm
+                Intent i = new Intent(AdminActivity.this, MainActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+                finish();
             }
         });
     }

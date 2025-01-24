@@ -1,5 +1,6 @@
 package com.example.loansapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -30,27 +31,15 @@ public class UserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        spinnerBrand = findViewById(R.id.spinnerBrand);
-        spinnerCable = findViewById(R.id.spinnerCable);
-        etName = findViewById(R.id.etName);
-        etContact = findViewById(R.id.etContact);
-        btnSubmit = findViewById(R.id.btnSubmit);
+        initGui();
+    }
+
+    private void initGui() {
+        fetchViews();
 
         loanController = new LoanController(this);
 
-        // Udfyld spinner for brand
-        String[] brands = {"Vælg brand", "Brand A", "Brand B"};
-        ArrayAdapter<String> brandAdapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_spinner_item, brands);
-        brandAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerBrand.setAdapter(brandAdapter);
-
-        // Udfyld spinner for kabeltype
-        String[] cables = {"Ingen", "USB-C", "Micro-USB"};
-        ArrayAdapter<String> cableAdapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_spinner_item, cables);
-        cableAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerCable.setAdapter(cableAdapter);
+        setupSpinners();
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,13 +63,7 @@ public class UserActivity extends AppCompatActivity {
                 String currentTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date());
 
                 // Opret Loan-objekt
-                Loan loan = new Loan();
-                loan.setTabletBrand(brand);
-                loan.setCableType(cable.equals("Ingen") ? "" : cable);
-                loan.setBorrowerName(name);
-                loan.setBorrowerContact(contact);
-                loan.setLoanTime(currentTime);
-                loan.setReturned(false);
+                Loan loan = createLoanObject(brand, cable, name, contact, currentTime);
 
                 long insertedId = loanController.createLoan(loan);
 
@@ -100,5 +83,41 @@ public class UserActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @NonNull
+    private static Loan createLoanObject(String brand, String cable, String name, String contact, String currentTime) {
+        Loan loan = new Loan();
+        loan.setTabletBrand(brand);
+        loan.setCableType(cable.equals("Ingen") ? "" : cable);
+        loan.setBorrowerName(name);
+        loan.setBorrowerContact(contact);
+        loan.setLoanTime(currentTime);
+        loan.setReturned(false);
+        return loan;
+    }
+
+    private void setupSpinners() {
+        // Udfyld spinner for brand
+        String[] brands = {"Vælg brand", "Brand A", "Brand B"};
+        ArrayAdapter<String> brandAdapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_spinner_item, brands);
+        brandAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerBrand.setAdapter(brandAdapter);
+
+        // Udfyld spinner for kabeltype
+        String[] cables = {"Ingen", "USB-C", "Micro-USB"};
+        ArrayAdapter<String> cableAdapter = new ArrayAdapter<>(
+                this, android.R.layout.simple_spinner_item, cables);
+        cableAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerCable.setAdapter(cableAdapter);
+    }
+
+    private void fetchViews() {
+        spinnerBrand = findViewById(R.id.spinnerBrand);
+        spinnerCable = findViewById(R.id.spinnerCable);
+        etName = findViewById(R.id.etName);
+        etContact = findViewById(R.id.etContact);
+        btnSubmit = findViewById(R.id.btnSubmit);
     }
 }
